@@ -1,0 +1,6 @@
+*.class
+*.ctxt
+*.lock
+.greenfoot/
+.DS_Store
+Thumbs.db
