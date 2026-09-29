@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.List;
+import java.util.ArrayList;
 /**
  * Write a description of class Zig here.
  * 
@@ -8,13 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Zig extends Agents
 {
-    /**
-     * Act - do whatever the Zig wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     private GreenfootImage imageZig;
-    public Zig()
+    public Zig(int velocidade)
     {
+        super(velocidade);
         imageZig = getImage();
         int larguraAtual = imageZig.getWidth();
         int alturaAtual = imageZig.getHeight();
@@ -24,6 +22,6 @@ public class Zig extends Agents
     public void act()
     {
         jump("w");
-        movingLR("a", "d");
+        //movingLR("a", "d");
     }   
-}
+}   

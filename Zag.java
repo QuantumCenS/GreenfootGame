@@ -9,8 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Zag extends Agents
 {
     private GreenfootImage imageZig;
-    public Zag()
+    public Zag(int velocidade)
     {
+        super(velocidade);
         imageZig = getImage();
         int larguraAtual = imageZig.getWidth();
         int alturaAtual = imageZig.getHeight();
@@ -20,6 +21,6 @@ public class Zag extends Agents
     public void act()
     {
         jump("up");
-        movingLR("left", "right");
+        //movingLR("left", "right");
     }  
 }

@@ -26,13 +26,16 @@ public class Cenario1 extends World
     
     public void populateWorld()
     {
-        Zig zig = new Zig();
-        addObject(zig,100,452);
+        Zig zig = new Zig(4);
+        addObject(zig,100,455);
         
-        Zag zag = new Zag();
-        addObject(zag, 900, 452);
+        Zag zag = new Zag(4);
+        addObject(zag, 900, 455);
         
-        Ground ground = new Ground();
+        ElementoInterativo ground = new ElementoInterativo();
         addObject(ground,getWidth()/2,getHeight() - ground.getImage().getHeight() / 2);
+        
+        CultistaInvocador cultista = new CultistaInvocador(4);
+        addObject(cultista,295,320);
     }
 }
