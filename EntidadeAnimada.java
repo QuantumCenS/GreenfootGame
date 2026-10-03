@@ -14,6 +14,8 @@ public class EntidadeAnimada extends Actor
      */
     private int vh;
     private int vv;
+    private int Xinicial;
+    private int Yinicial;
     public EntidadeAnimada(int vh){
         this.vh=vh;
         this.vv=0;
@@ -22,35 +24,22 @@ public class EntidadeAnimada extends Actor
     {
         // Add your action code here.
     }
-    private int ySpeed;
-    public void jump(String jumpKey)
-    {
-        int groundLevel = getWorld().getWidth() - getImage().getHeight()/2;
-        boolean onGround = isTouching(ElementoInterativo.class);
-        if (!onGround) // in middle of jump
-        {
-            ySpeed++; // adds gravity effect
-            setLocation(getX(), getY()+ySpeed); // fall (rising slower or falling faster)
-            if (getY()>=groundLevel) // has landed (reached ground level)
-            {
-                setLocation(getX(), groundLevel); // set on ground
-                Greenfoot.getKey(); // clears any key pressed during jump
-           }
-        }
-        else // on ground
-        {
-            if (Greenfoot.isKeyDown(jumpKey)) // jump key detected
-            {
-                ySpeed = -15; // add jump speed
-                setLocation(getX(), getY()+ySpeed); // leave ground
-            }
-        }
-    }
     public void moving(int direcaoX, int deltaY)
     {
         int novoX=getX() +(direcaoX*vh);
         int novoY=getY() + deltaY;
         
         setLocation(novoX,novoY);
+    }
+    @Override
+    protected void addedToWorld(World world){
+        this.Xinicial=getX();
+        this.Yinicial=getY();
+    }
+    public int getXinicial(){
+        return Xinicial;
+    }
+    public int getYinicial(){
+        return Yinicial;
     }
 }

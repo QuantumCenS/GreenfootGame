@@ -21,6 +21,6 @@ public class Zag extends Agents
     public void act()
     {
         jump("up");
-        //movingLR("left", "right");
+        movingLR("left", "right");
     }  
 }

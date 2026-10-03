@@ -13,20 +13,14 @@ public class CultistaInvocador extends InimigoCosmico
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int limite;
+    private int direcao;
     public CultistaInvocador(int limite, int velocidade){
-        super(velocidade);
-        GreenfootImage placeholder = new GreenfootImage(40, 50);
-        placeholder.setColor(Color.RED);
-        placeholder.fill();
-        setImage(placeholder);
+        super(limite,velocidade);
         this.limite=limite;
+        direcao=1;
     }
     public void act()
     {
-        
     }
-    //*public void limitMove(int limite){
-        //()
-    
-    //}
+    //Passar para inimigo cosmico
 }

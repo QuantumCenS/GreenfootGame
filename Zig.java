@@ -22,6 +22,6 @@ public class Zig extends Agents
     public void act()
     {
         jump("w");
-        //movingLR("a", "d");
+        movingLR("a", "d");
     }   
 }   

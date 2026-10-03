@@ -12,8 +12,8 @@ public class CriaturaAbissal extends InimigoCosmico
      * Act - do whatever the CriaturaAbissal wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public CriaturaAbissal(int velocidade){
-        super(velocidade);
+    public CriaturaAbissal(int limite,int velocidade){
+        super(limite,velocidade);
     }
     public void act()
     {

@@ -35,7 +35,7 @@ public class Cenario1 extends World
         ElementoInterativo ground = new ElementoInterativo();
         addObject(ground,getWidth()/2,getHeight() - ground.getImage().getHeight() / 2);
         
-        CultistaInvocador cultista = new CultistaInvocador(4);
-        addObject(cultista,295,320);
+        InimigoCosmico inimigo = new InimigoCosmico(285,3);
+        addObject(inimigo,295,320);
     }
 }
