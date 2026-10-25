@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"<Unnamed>","c":"MyWorld","l":"MyWorld()","u":"%3Cinit%3E()"}];updateSearchResults();
